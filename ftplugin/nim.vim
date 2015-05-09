@@ -21,3 +21,4 @@ compiler nim
 let &cpo = s:cpo_save
 unlet s:cpo_save
 
+nnoremap <buffer> <silent> gd :call JumpToDef()<cr>

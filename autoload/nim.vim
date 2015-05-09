@@ -226,3 +226,10 @@ if !exists("g:quickrun_config.nim")
   let g:quickrun_config.nim = { "exec": "nim c --run --verbosity:0 %S" }
 endif
 
+fun! JumpToDef()
+  if exists("*GotoDefinition_" . &filetype)
+    call GotoDefinition_{&filetype}()
+  else
+    exe "norm! \<C-]>"
+  endif
+endf
